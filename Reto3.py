@@ -56,7 +56,7 @@ class Pasta(MenuItem):
     def __str__(self):
         return f"{self.type} - {self.name} - {self.tipo} - $ {self.price}"
 
-class Vegan(MenuItem):
+class VeganFood(MenuItem):
     def __init__(self, name: str, price: float, amount: int):
         self.type = "Vegan"
         super().__init__(name, price, amount)
