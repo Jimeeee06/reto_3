@@ -1,7 +1,7 @@
 
 ```mermaid
 classDiagram
-    direction RL
+    direction TB
     class MenuItem {
 	    -String name
 	    -float price
