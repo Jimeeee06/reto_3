@@ -91,8 +91,6 @@ class Rectangle:
             return True
         else:
             return False
-    def compute_interference_line(self, ) -> bool:
-        pass
     
 
 class Square(Rectangle):
