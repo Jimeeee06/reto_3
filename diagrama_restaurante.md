@@ -1,9 +1,3 @@
----
-config:
-  theme: neo-dark
----
-
-```mermaid
 classDiagram
     direction RL
     class MenuItem {
