@@ -3,67 +3,68 @@ config:
   theme: neo-dark
 ---
 
+```mermaid
 classDiagram
-direction RL
+    direction RL
     class MenuItem {
-	    +String name
-	    +float price
-	    +int amount
-	    +String type
+	    -String name
+	    -float price
+	    -int amount
+	    -String type
 	    +total_price()
     }
 
     class Beverage {
-	    +String flavour
+	    -String flavour
     }
 
     class MainCourse {
-	    +String appetizer
+	    -String appetizer
     }
 
     class Hamburger {
-	    +String flavour
-	    +String size
+	    -String flavour
+	    -String size
     }
 
     class Pizza {
-	    +String flavour
-	    +String size
+	    -String flavour
+	    -String size
     }
 
     class Salad {
-	    +String flavour
+	    -String flavour
     }
 
     class Pasta {
-	    +String flavour
+	    -String flavour
     }
 
     class VeganFood {
-	    +String flavour
+	    -String flavour
     }
 
     class SeaFood {
-        +String fish_type
+        -String fish_type
     }
 
     class AsianFood {
-        +String flavour
+        -String flavour
     }
 
     class Dessert {
-	    +String flavour
-	    +String Size
+	    -String flavour
+	    -String Size
     }
 
     class Soup {
-	    +String flavour
+	    -String flavour
     }
 
     class Order {
-        +int order_number
-        +list items
-        +float total_price
+        -int order_number
+        -list items
+        -float total_price
         +add_item( item: MenuItem )
         +remove_item( item: MenuItem )
         +is_discounted()
@@ -82,4 +83,4 @@ direction RL
     MenuItem <|-- Dessert
     MenuItem <|-- Soup
     Order *-- MenuItem: (has)
-
+```
