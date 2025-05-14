@@ -55,7 +55,7 @@ class Rectangle:
             self.width = width
             self.height = height
             self.corner_point = corner_point
-            self.center = Point(self.bottom_left_corner.x + self.width / 2, self.bottom_left_corner.y + self.height / 2)
+            self.center = Point(self.corner_point.x + self.width / 2, self.corner_point.y + self.height / 2)
         #if the method is 2, we ask for the width and height of the rectangle,
         #and for the center of the rectangle.
         elif method == 2:
@@ -91,6 +91,8 @@ class Rectangle:
             return True
         else:
             return False
+    def compute_interference_line(self, ) -> bool:
+        pass
     
 
 class Square(Rectangle):
