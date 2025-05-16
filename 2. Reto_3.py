@@ -116,7 +116,7 @@ class Order:
     def total_price(self):
         total = 0
         for item in self.items:
-            total += item.price()
+            total += item.price()*item.amount()
         return total
     def is_discounted(self):
         if self.total_price() > 50:
@@ -126,6 +126,7 @@ class Order:
     def apply_discount(self):
         if self.is_discounted():
             discount = self.total_price() * 0.3
+            self.total_price = self.total_price - self.total_price() * 0.3
             return discount
         else:
             return "No discount available"
